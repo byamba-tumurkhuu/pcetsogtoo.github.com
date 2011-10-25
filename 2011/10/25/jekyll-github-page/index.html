@@ -33,10 +33,10 @@
         
         <div class="content float_left">
           <div class="post">
-  <div>October 24, 2011</div> 
+  <div>October 25, 2011</div> 
 
   <h4 class="post-title">
-    <a class="post_title" href="/2011/10/24/jekyll-github-page">Jekyll, GitHub хуудсын тухай</a>
+    <a class="post_title" href="/2011/10/25/jekyll-github-page">Jekyll, GitHub хуудсын тухай</a>
   </h4>
 
   <div class="post-content"> <p>Амархан сайн байна уу? Будаг нь ханхалсан блогоосоо таны мэндийг айлтгая. Ойрын үед ажил, хичээл, шалгалт зэрэг олон зүйл давхцсан ч
@@ -118,7 +118,51 @@ sudo gem install jekyll
 
 <p><strong> GitHub луу деплой хийх </strong></p>
 
-<p>Шинэ бичлэгээ _posts фолдерт нэмээд мастер репо луугаа пүш хийнэ. Надад хамгийн их таалагдсан зүйл нь.</p>
+<p>Амжилттай явсаар байсан ч деплой хийх дээрээ жаахан саатав. Миний ойлгосноор Jekyll эх кодоо мастер репо луугаа түлхэхэд
+гитхаб автоматаар html кодыг үүсгэж сайтыг мань байгуулна. Тиймээс деплой хийх нь хамгийн амархан. Ердөө өөрчлөлтөө
+коммит хийгээд мастер репо луугаа пүш хийнэ. Миний хувьд эхний хэдэн коммитоо амжилттай гитхаб руу деплой
+хийгээд явж байсан боловч нэг томоохон өөрчлөлтийн дараа гитхаб миний кодоос html-ийг зөв үүсгэхгүй байгаа нь мэдэгдэв.
+Чухам яг юуг буруу хийсэн юм чөтгөр бүү мэд, хайгаад олсонгүй. Локал дээрээ зөв ажиллаж байгаа боловч гитхаб луу деплой хийхэд
+темплэйтээ зөв рендерлэхгүй байлаа. Ингээд автоматаар деплой хийдэг скрипт бичлээ. Jekyll-ийн үүсгэсэн статик кодыг л мастер реподоо
+хуулаад байхад болохоор санагдав.</p>
+
+<div class="highlight"><pre><code class="bash"><span class="c">#!/bin/bash</span>
+
+<span class="nv">tmp</span><span class="o">=</span>/tmp/tmp<span class="nv">$$</span>
+
+<span class="nv">cur_dir</span><span class="o">=</span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>
+<span class="nv">git_dir</span><span class="o">=</span><span class="nv">$tmp</span>-git_dir
+<span class="nv">site_dir</span><span class="o">=</span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/site
+<span class="nv">reponame</span><span class="o">=</span>pcetsogtoo.github.com
+<span class="nv">repo</span><span class="o">=</span>git@github.com:pcetsogtoo/pcetsogtoo.github.com.git
+
+<span class="k">function </span>USAGE<span class="o">(){</span>
+cat <span class="s">&lt;&lt; EOF</span>
+<span class="s">&quot;USAGE: ./deploy &quot;Git commit message&quot;</span>
+<span class="s">EOF</span>
+<span class="nb">exit </span>1
+<span class="o">}</span>
+<span class="o">[</span> -z <span class="s2">&quot;$1&quot;</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> USAGE 
+
+<span class="nv">message</span><span class="o">=</span><span class="nv">$1</span> <span class="c"># Commit хийх мессеж</span>
+
+mkdir -p <span class="nv">$git_dir</span>
+<span class="nb">cd</span> <span class="nv">$git_dir</span>
+
+git clone <span class="nv">$repo</span>
+<span class="nb">cd</span> <span class="nv">$reponame</span>
+
+git rm -r ./* <span class="c"># Wipe out current content</span>
+
+cp -rp <span class="nv">$site_dir</span>/* . <span class="c"># Copy entire generated static content so I can adjust deletion &amp; insertion</span>
+git add .
+git commit -m <span class="s2">&quot;$message&quot;</span> <span class="o">&amp;&amp;</span>  git push
+
+sudo rm -r <span class="nv">$tmp</span>-*
+<span class="nb">exit </span>0
+</code></pre>
+</div>
+
 
 <p>Ингээд өөрийн гэсэн гитхабийн дэд домэйнтэй бас статик хуудас хосттой боллоо. Үнэхээр минимал, ашиглахад хялбар юм. Блог хийх ерөнхий
 ажлаа нэг орой л дуусгачихсан. Хамгийн чухал нь эрх чөлөөтэй, өөрийн хийсэн юм цаанаа л нэг өөр байх юм. Та бүхэн ч бас <a href="https://github.com/mojombo/jekyll">Jekyll</a>
@@ -161,7 +205,7 @@ sudo gem install jekyll
             <h5> Recent Posts</h5>
             
             <li>
-              <a href="/2011/10/24/jekyll-github-page">Jekyll, GitHub хуудсын тухай</a>
+              <a href="/2011/10/25/jekyll-github-page">Jekyll, GitHub хуудсын тухай</a>
             </li>
             
             <li>
