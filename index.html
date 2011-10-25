@@ -1,0 +1,27 @@
+---
+layout: default 
+title: Eternal loop
+---
+
+{% for post in site.posts limit: 4 %}
+
+  <div class="post">
+    <div>{{ post.date | date: "%B %e, %Y" }}</div> 
+
+    <h4 class="post-title">
+      <a class="post_title" href="{{ site.posts.first.url }}">{{ post.title }}</a>
+    </h4>
+
+    <div class="post-content"> 
+      {{ post.content  | truncatewords: 148 }} 
+
+      <div class="float_right">
+        <a href={{ post.url}} class="read-more">Read More » </a>
+      </div>
+
+      <div class="clear"></div>
+    </div>
+
+  </div>
+
+{% endfor %}
