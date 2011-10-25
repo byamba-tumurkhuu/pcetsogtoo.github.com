@@ -7,6 +7,19 @@ git_dir=$tmp-git_dir
 site_dir=$(pwd)/site
 reponame=pcetsogtoo.github.com
 
+function USAGE(){
+cat << EOF
+
+"USAGE: ./deploy "Git commit message"
+
+EOF
+exit 1
+}
+
+[ -z "$1" ] && USAGE 
+
+message=$1
+
 repo=git@github.com:pcetsogtoo/pcetsogtoo.github.com.git
 
 mkdir -p $git_dir
@@ -17,7 +30,7 @@ cd $reponame
 
 cp -rp $site_dir/* .
 git add .
-git commit -m "test"
+git commit -m "$message"
 git push
 
 sudo rm -r $tmp-*
