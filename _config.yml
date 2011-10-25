@@ -1,8 +1,7 @@
-auto: true
 markdown: rdiscount
+auto: true
 permalink: /:year/:month/:day/:title
 plugins: ./plugins
 destination: ./site
 pygments: true
-rdiscount
-  extensions: [smart]
+disqus_username: mygithubpage
