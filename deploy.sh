@@ -28,9 +28,9 @@ cd $git_dir
 git clone $repo
 cd $reponame
 
-git rm ./* # Wipe out everything
+git rm -r ./* # Wipe out everything
 
-cp -rp $site_dir/* . #Copy everything
+cp -rp $site_dir/* . #Copy everything so I can adjust deletion & insertion
 git add .
 git commit -m "$message"
 git push

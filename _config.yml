@@ -1,7 +1,0 @@
-markdown: rdiscount
-auto: true
-permalink: /:year/:month/:day/:title
-plugins: ./plugins
-destination: ./site
-pygments: true
-disqus_username: mygithubpage
