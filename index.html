@@ -1,22 +1,51 @@
----
-layout: default 
-title: Eternal loop
----
+<!DOCTYPE HTML>
 
-{% for post in site.posts limit: 4 %}
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="author" content="Byambatsogt Tumurkhuu" />
+    <title>Eternal loop</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/site.css" />
+    <link rel="stylesheet" href="/css/pygments_default.css" />
+
+  </head>
+  <body>
+
+    <div class="container" >
+
+      <div class="left-sidebar float_left">
+        <ul class="unstyled">
+          <li><a href="/">Home</a></li>
+          <li><a href="/posts.html">Posts</a></li>
+          <li><a href="/about.html">About</a></li>
+        </ul>
+      </div>
+
+
+      <div class="main">
+        <div class="page-header">
+          <h1>
+            <a href="/">Eternal Loop</a>
+            <small> by Byambatsogt Tumurkhuu </small>
+          </h1>
+        </div>
+        
+        <div class="content float_left">
+          
 
   <div class="post">
-    <div>{{ post.date | date: "%B %e, %Y" }}</div> 
+    <div>October 24, 2011</div> 
 
     <h4 class="post-title">
-      <a class="post_title" href="{{ site.posts.first.url }}">{{ post.title }}</a>
+      <a class="post_title" href="/2011/10/24/jekyll-github-page">Jekyll, GitHub хуудсын тухай</a>
     </h4>
 
     <div class="post-content"> 
-      {{ post.content  | truncatewords: 148 }} 
+      <p>Амархан сайн байна уу? Будаг нь ханхалсан блогоосоо таны мэндийг айлтгая. Ойрын үед ажил, хичээл, шалгалт зэрэг олон зүйл давхцсан ч дундуур нь блогоо <a href="https://github.com/mojombo/jekyll">Jekyll</a> дээр хийгээд амжлаа. <a href="https://github.com/mojombo/jekyll">Jekyll</a> бол рүби дээр суурилсан блог маягийн статик сайт үүсгэх зориулалттай програм юм. Блогспотын хязгаарлагдмал байдал, ойлгомжгүй нүсэр темплайт систем зэрэг олон зүйлээс нь нэгэнтээ залхаад байсны дээр <a href="http://pages.github.com">GitHub хуудас</a> <a href="https://github.com/mojombo/jekyll">Jekyll</a>-ийг дэмждэг тухай дуулмагц уухайн тас <a href="https://github.com/mojombo/jekyll">Jekyll</a> руу урвачихлаа. <a href="http://pages.github.com">GitHub хуудасын</a> тухай товчхон өгүүлэхэд энэ нь хэрэглэгчиддээ өөрсдийн дэд домайнээ үүсгэх, мөн статик html вэб хост хийх боломж олгодог юм байна. Жишээ нь миний гитхаб хэрэглэгчийн нэр pcetsogtoo бөгөөд би pcetsogtoo.github.com гэсэн дэд домайн эзэмшиж байна. Өөрийн хуудсыг үүсгэх маш амархан. Дараах 2 алхмыг хийхэд л хангалттай.</p> <ol> <li>username.github.com гэсэн репо үүсгэнэ.</li> <li>index.html файл үүсгээд гитхаб луу пүш хийнэ.</li> </ol> <p>Хамгийн эхний пүш дээр 10 минут хүртэл хугацаа шаардагдаж байж сайт луу хандах эрхтэй... 
 
       <div class="float_right">
-        <a href={{ post.url}} class="read-more">Read More » </a>
+        <a href=/2011/10/24/jekyll-github-page class="read-more">Read More » </a>
       </div>
 
       <div class="clear"></div>
@@ -24,4 +53,121 @@ title: Eternal loop
 
   </div>
 
-{% endfor %}
+
+
+  <div class="post">
+    <div>September 28, 2011</div> 
+
+    <h4 class="post-title">
+      <a class="post_title" href="/2011/10/24/jekyll-github-page">Скалагийн тухай товчхон</a>
+    </h4>
+
+    <div class="post-content"> 
+      <p>Скала хэлийг анхлан сурч эхэлснээс хойш жил гаруй болжээ. Өмнө рүби, Жава, php зэрэг хэд хэдэн хэл ашиглаж байсан боловч өнгөц төдийхөн гадарлахаас цаашгүй байжээ. Асуудал гарвал гүүгл найзаасаа асууна, цаад учир шалтгааныг сайтар ойлголгүй бэлэн будаа идэж явсан тохиолдол зөндөө бий. Ийм мэдлэг хүнд сайтар тогтож үлддэггүй юм байна. Асуудлыг үндэс суурьтай ойлгох (чухал), тэмдэглэл хийж үлдээх (маш чухал) гэсэн 2 чанар дутагдаж байж. Ийм дүгнэлт өөртөө хийгээд скалагаа нилээн няхууртай судлая гэдэг зорилт тавиад, сурч байна. Ажил дээрээ ашигладаг болохоор дөхөмтэйг хэлэх үү, сураад байдаг хэрэг ээ хө. Бага гэж гололгүй сурсан мэдлэгээсээ блогтоо үлдээж байхаар шийдлээ. Ер нь их мундаг болохоороо блог хөтлөе гэж хойш тавьсаар байтал чамгүй хугацаа өнгөрч. Хэзээ мундаг болох юм билээ, хүлээсээр байтал нас явлаа. Бага багаар бичээд л байя. Ингээд үндсэн сэдэвтээ.</p> <p><strong>Скала гэж юу вэ?</strong></p> <p>Скала нь Обьект хандалтат болон Функциональ програмчлалын хэлний шинж чанарыг хослуулсан эрлийз хэл юм.... 
+
+      <div class="float_right">
+        <a href=/2011/09/28/%D1%81%D0%BA%D0%B0%D0%BB%D0%B0%D0%B3%D0%B8%D0%B9%D0%BD-%D1%82%D1%83%D1%85%D0%B0%D0%B9-%D1%82%D0%BE%D0%B2%D1%87%D1%85%D0%BE%D0%BD class="read-more">Read More » </a>
+      </div>
+
+      <div class="clear"></div>
+    </div>
+
+  </div>
+
+
+
+  <div class="post">
+    <div>September 22, 2011</div> 
+
+    <h4 class="post-title">
+      <a class="post_title" href="/2011/10/24/jekyll-github-page">Эхний бичлэг буюу Ballmer Peak гэж юу вэ?</a>
+    </h4>
+
+    <div class="post-content"> 
+      <p>За ямар архичин нөхрийн блогоор ороод ирэвээ гэж битгий бодоорой! Энэ блогийн хэтийн зорилго бол архитай огт холбоогүй, хэрэгтэй хэрэггүй кодын хувийн тэмдэглэл юм. Гэвч энэ сэдэв шиг хадуурч блогдох магадлал өндөр буй. Оршлоо өндөрлөөд үндсэн сэдэвтээ ороё.</p> <p>Байн байн бодогдоод л, хараад ширтээд баймаар тасарцан код бичиж байсан уу. Хүнд үзүүлж гайхуулмаар, би яаж ийм код биччивээ гэж өөрөө бас гайхмаар. Бүх юм нь төгс, нэмж засах нь битгий хэл нээхдээ зөвхөн read-only горимоор л хардаг тийм хайр хүрмээр код бичиж байсан уу. Хэрэв тэр кодоо согтуудаа бичсэн бол Ballmer Peak гэдэг юм байна. Албан ёсны тодорхойлолт (албан ёсных шүү :P) нь “Цусан дах спиртийн хэмжээ 0.129%-с 0.138% хооронд байх үед програмистуудад илэрдэг код бичих супер хүчин чадлыг Ballmer Peak гэнээ” гэж. Товчхондоо бол согтуу програмчын онгод гэх юмуу даа.</p> <p>Угшил нь ЖижигЗөөлөн компаний гүйцэтгэх захирал Steve Ballmer-ийг шоглож <a href="http://xkcd.com/">xkcd</a>-гаргасан <a href="http://xkcd.com/323/">комикоос</a> гаралтай. Уг нь бол... 
+
+      <div class="float_right">
+        <a href=/2011/09/22/ballmer-peak class="read-more">Read More » </a>
+      </div>
+
+      <div class="clear"></div>
+    </div>
+
+  </div>
+
+
+
+        </div>
+
+        <div class="right-sidebar float_right">
+
+          <div class="sidebox">
+            <h5> Recent Posts</h5>
+            
+            <li>
+              <a href="/2011/10/24/jekyll-github-page">Jekyll, GitHub хуудсын тухай</a>
+            </li>
+            
+            <li>
+              <a href="/2011/09/28/%D1%81%D0%BA%D0%B0%D0%BB%D0%B0%D0%B3%D0%B8%D0%B9%D0%BD-%D1%82%D1%83%D1%85%D0%B0%D0%B9-%D1%82%D0%BE%D0%B2%D1%87%D1%85%D0%BE%D0%BD">Скалагийн тухай товчхон</a>
+            </li>
+            
+            <li>
+              <a href="/2011/09/22/ballmer-peak">Эхний бичлэг буюу Ballmer Peak гэж юу вэ?</a>
+            </li>
+            
+          </div>
+
+          <div class="sidebox">
+            <h5>Tag Cloud</h5>
+            <div class='cloud'>
+              <a style='font-size: -nan%' href='/tags.html#наргиа'>наргиа</a>
+<a style='font-size: -nan%' href='/tags.html#Jekyll'>Jekyll</a>
+<a style='font-size: -nan%' href='/tags.html#GitHub Page'>GitHub Page</a>
+<a style='font-size: -nan%' href='/tags.html#Disqus'>Disqus</a>
+<a style='font-size: -nan%' href='/tags.html#ballmer peak'>ballmer peak</a>
+<a style='font-size: -nan%' href='/tags.html#Liquid'>Liquid</a>
+<a style='font-size: -nan%' href='/tags.html#scala'>scala</a>
+<a style='font-size: -nan%' href='/tags.html#Markdown'>Markdown</a>
+ 
+            </div>
+          </div>
+
+          <div class="sidebox">
+            <h5>Latest Tweets</h5>
+            <div id="twitter_update_list"></div>
+            <script src="http://twitter.com/javascripts/blogger.js" type="text/javascript"></script>
+            <script src="http://twitter.com/statuses/user_timeline/pcetsogtoo.json?callback=twitterCallback2&amp;count=6" type="text/javascript"></script>
+            <center>
+              <a href="http://twitter.com/pcetsogtoo" target="_blank">
+                <img src="http://indicebloggerfiles.googlepages.com/follow-me.png" title="Follow me on Twitter" />
+              </a>
+            </center>
+          </div>
+
+        </div>
+
+        <div class="clear"></div>
+
+        <footer>
+        <p>&copy; Byambatsogt Tumurkhuu 2011. Powered by Jekyll</p>
+        </footer>
+      </div>
+
+
+    </div> 
+
+
+  </body>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-26003238-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</html>
