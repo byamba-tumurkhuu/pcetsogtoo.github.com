@@ -2,7 +2,6 @@
 
 tmp=/tmp/tmp$$
 
-cur_dir=$(pwd)
 git_dir=$tmp-git_dir
 site_dir=$(pwd)/site
 reponame=pcetsogtoo.github.com
